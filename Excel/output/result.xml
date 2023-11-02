@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Items xmlns="Note">
+<Item><Sequence>1</Sequence> <Name>Helena de Lima</Name> <Note>4,00</Note> <Analysis>Reprovou</Analysis> <Created>2023-11-02T17:34:50.802-03:00</Created></Item>
+<Item><Sequence>2</Sequence> <Name>José dos Santos</Name> <Note>4,99</Note> <Analysis>Reprovou</Analysis> <Created>2023-11-02T17:34:50.806-03:00</Created></Item>
+<Item><Sequence>3</Sequence> <Name>Adelia de Almeida</Name> <Note>5,00</Note> <Analysis>Recuperação</Analysis> <Created>2023-11-02T17:34:50.812-03:00</Created></Item>
+<Item><Sequence>4</Sequence> <Name>Virginia Novick</Name> <Note>6,99</Note> <Analysis>Recuperação</Analysis> <Created>2023-11-02T17:34:50.815-03:00</Created></Item>
+<Item><Sequence>5</Sequence> <Name>Souza de Santos Filho</Name> <Note>7,00</Note> <Analysis>Boa Nota</Analysis> <Created>2023-11-02T17:34:50.817-03:00</Created></Item>
+<Item><Sequence>6</Sequence> <Name>Juana de Souza</Name> <Note>9,50</Note> <Analysis>Excelente</Analysis> <Created>2023-11-02T17:34:50.819-03:00</Created></Item>
+<Item><Sequence>7</Sequence> <Name>Ana Lucia Baraldo</Name> <Note>9,80</Note> <Analysis>Excelente</Analysis> <Created>2023-11-02T17:34:50.820-03:00</Created></Item>
+<Item><Sequence>8</Sequence> <Name>Ana Virgilia Fonseca dos Santos</Name> <Note>10,00</Note> <Analysis>Gabarito</Analysis> <Created>2023-11-02T17:34:50.822-03:00</Created></Item>
+<Item><Sequence>9</Sequence> <Name>Paulo de Souza</Name> <Note>10,00</Note> <Analysis>Gabarito</Analysis> <Created>2023-11-02T17:34:50.823-03:00</Created></Item>
+</Items>
