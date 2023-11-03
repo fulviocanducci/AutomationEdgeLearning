@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+    <info>
+    <name>W_Web</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <created_user>dias.fulvio&#x40;gmail.com</created_user>
+    <created_date>2023&#x2f;11&#x2f;03 18&#x3a;47&#x3a;26.456</created_date>
+    <modified_user>dias.fulvio&#x40;gmail.com</modified_user>
+    <modified_date>2023&#x2f;11&#x2f;03 19&#x3a;40&#x3a;16.158</modified_date>
+    <fileHash>f5930869aa5d9e8807cc8ccfe75caed6</fileHash>
+    <stepEntryHash>24db04dde122b306441e316389413142</stepEntryHash>
+
+    <directory>&#x2f;</directory>
+    <parameters>
+    </parameters>
+    <parameterConfiguration>
+      <grouping>
+      </grouping>
+    </parameterConfiguration>
+    <ps_variables>
+    </ps_variables>
+    <logging_table>
+    </logging_table>
+    <size_rowset>10000</size_rowset>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <key_for_session_key/>
+    <is_key_private>N</is_key_private>
+  </info>
+  <order>
+    <hop>
+      <from>Start Browser</from>
+      <to>Web Set Delay</to>
+      <enabled>Y</enabled>
+      <visible>Y</visible>
+    </hop>
+    <hop>
+      <from>Web Set Delay</from>
+      <to>Web Click</to>
+      <enabled>Y</enabled>
+      <visible>Y</visible>
+    </hop>
+    <hop>
+      <from>Web Click</from>
+      <to>Delay row</to>
+      <enabled>N</enabled>
+      <visible>Y</visible>
+    </hop>
+    <hop>
+      <from>Delay row</from>
+      <to>Web Alert</to>
+      <enabled>N</enabled>
+      <visible>Y</visible>
+    </hop>
+    <hop>
+      <from>Web Click</from>
+      <to>Delay row 2</to>
+      <enabled>Y</enabled>
+      <visible>Y</visible>
+    </hop>
+    <hop>
+      <from>Delay row 2</from>
+      <to>Web Alert 2</to>
+      <enabled>Y</enabled>
+      <visible>Y</visible>
+    </hop>
+    <hop>
+      <from>Web Alert 2</from>
+      <to>Web Alert 4</to>
+      <enabled>Y</enabled>
+      <visible>Y</visible>
+    </hop>
+    <hop>
+      <from>Web Alert 4</from>
+      <to>Delay row 3</to>
+      <enabled>Y</enabled>
+      <visible>Y</visible>
+    </hop>
+    <hop>
+      <from>Delay row 3</from>
+      <to>Web Alert 3</to>
+      <enabled>Y</enabled>
+      <visible>Y</visible>
+    </hop>
+  </order>
+  <step>
+    <name>Web Alert</name>
+    <type>AlertStep</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+      <option>Accept</option>
+      <value/>
+      <driverName>BROWSER1</driverName>
+      <output/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>544</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Start Browser</name>
+    <type>BeginStep</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+      <browser>Google Chrome</browser>
+      <ignoreIeProtectedModeSettings>N</ignoreIeProtectedModeSettings>
+      <url>http&#x3a;&#x2f;&#x2f;localhost&#x3a;4646</url>
+      <delay>0</delay>
+      <maximize>Y</maximize>
+      <startNode>Y</startNode>
+      <notif>Y</notif>
+      <driverName>BROWSER1</driverName>
+      <pageLoadTime>10000</pageLoadTime>
+      <retryCount>0</retryCount>
+      <defaultDownloadDirectory/>
+      <clearBrowser>Y</clearBrowser>
+      <ieMode>N</ieMode>
+      <profile/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>48</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Web Set Delay</name>
+    <type>SetDelay</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+      <driverName>BROWSER1</driverName>
+      <delay>5</delay>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>192</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Web Click</name>
+    <type>ClickStep</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+      <criteria>Id</criteria>
+      <clickoptions>NormalClick</clickoptions>
+      <value>btnPrompt</value>
+      <multiple>N</multiple>
+      <index>0</index>
+      <driverName>BROWSER1</driverName>
+      <numberOfClicks>1</numberOfClicks>
+    <criteriaAttributes>
+    </criteriaAttributes>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>320</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Delay row</name>
+    <type>Delay</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <timeout>4</timeout>
+    <scaletime>seconds</scaletime>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>432</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Delay row 2</name>
+    <type>Delay</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <timeout>2</timeout>
+    <scaletime>seconds</scaletime>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>320</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Web Alert 2</name>
+    <type>AlertStep</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+      <option>GetValue</option>
+      <value/>
+      <driverName>BROWSER1</driverName>
+      <output>Result</output>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>432</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Web Alert 3</name>
+    <type>AlertStep</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+      <option>Accept</option>
+      <value/>
+      <driverName>BROWSER1</driverName>
+      <output/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>736</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Web Alert 4</name>
+    <type>AlertStep</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+      <option>SetValue</option>
+      <value>SourceSource</value>
+      <driverName>BROWSER1</driverName>
+      <output/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>544</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Delay row 3</name>
+    <type>Delay</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <timeout>6</timeout>
+    <scaletime>seconds</scaletime>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>640</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_workflow>N</slave_workflow>
+  <groups>
+  </groups>
+  <notepads>
+  </notepads>
+</transformation>
