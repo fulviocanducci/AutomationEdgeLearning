@@ -1,0 +1,4 @@
+codigo;nome;salario;data
+1;Fulvio Cezar Canducci Dias;1500.00;10/10/2010
+2;Cezariuo Canducci Dias;1400.00;11/10/2010
+3;Maria Canducci Dias;1600.00;10/12/2010
